@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {  Route, Switch } from 'react-router-dom';
 import Home from "./components/Home";
-import About from "./components/About";
-import News from "./components/News";
-import Navbar from './components/CustomNavbar';
+import Onama from "./components/Onama";
+
+import CustomNavbar from './components/CustomNavbar';
+import Reference from "./components/Reference";
+import Kontakt from './components/Kontakt';
 
 class App extends Component {
   render() {
     return (
-    <Router>
-      <div>
-        <Navbar/>
-      <Route exact path="/" component={Home}/>
-      <Route  path="/news" component={News}/>
-      <Route  path="/about" component={About}/>
-      </div>
-    </Router>
+        <div>
+          <CustomNavbar/> 
+          <Switch>  
+            <Route exact path="/" component={Home}/>  
+            <Route  path="/onama" component={Onama}/>
+            <Route  path="/Reference" component={Reference}/>
+            <Route  path="/Kontakt" component={Kontakt}/>  
+            </Switch>  
+         
+        </div>
+  
     );
   }
 }

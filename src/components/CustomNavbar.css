@@ -1,0 +1,7 @@
+/* .moja-nav {
+    background: red;
+} */
+
+.navbar-default .navbar-nav>li>a {
+    color: blue;
+}
